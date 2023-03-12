@@ -5,7 +5,6 @@ table.setHeading('Command', 'Load Status');
 
 module.exports = (client) => {
     try {
-        let commandArray = [];
         fs.readdirSync('./src/bot/commands').forEach(async (folder) => {
             const commandFiles = fs.readdirSync(`./src/bot/commands/${folder}`).filter(file => file.endsWith('.ts'));
             for (const file of commandFiles) {
